@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include <string.h>
+int main(){
+    char str[50];
+    int vowel = 0;
+    int cons = 0;
+    int num = 0;
+    int space = 0;
+    int spl = 0;
+    printf("Enter the string: ");
+    gets(str);
+    for(int i = 0;str[i]!='\0';i++)
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+            vowel++;
+        else if(str[i]>='a'&&str[i]<='z'||str[i]>='A'&&str[i]<='Z')
+            cons++;
+        else if(str[i]>='0' &&str[i]<='9')
+            num++;
+        else if(str[i]==' ')
+            space++;
+        else
+            spl++;
+    }
+    printf("\nTotal no. of vowels in the given string is %d\n",vowel);
+    printf("Total no. of consonants in the given string is %d\n",cons);
+    printf("Total no. of numbers in the given string is %d\n",num);
+    printf("Total no. of spaces in the given string is %d\n",space);
+    printf("Total no. of special characters in the given string is %d\n",spl);
+    
+    return 0;
+
+}
